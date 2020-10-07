@@ -68,29 +68,20 @@ python3 manage.py makemigrations
 python3 manage.py migrate
 ```
 
-- In tweets folder make `config.py` file using following command -
+
+
+- To Generate a `secret key` for django app, Go to this website [here](https://djecrety.ir/)
+
+- Click on Generate Button
+- And Copy this Generated Secret Key
+- Paste this Key in `SECRET_KEY` in `settings.py` file in twitter folder .
+- Also get `CONSUMER_KEY` AND `CONSUMER_SECRET` using Twitter Developer Account from [here](https://developer.twitter.com/en) and store in `settings.py` file and `views.py` in toplinks folder.
+- Finally the three variables will look like -
 
 ```
-cd Twitter-Toplinks-master/twitter
-touch config.py
-```
-
-- Generate a `secret key` for django app using -
-
-```
-Open python shell using python command in terminal
-import secrets
-secrets.token_hex(24)
-```
-
-- Store the output in `SECRET_KEY` in `config.py` file.
-- Also get `CONSUMER_KEY` AND `CONSUMER_SECRET` using Twitter Developer Account from [here](https://developer.twitter.com/en) and store in `config.py` file
-- Finally `config.py` file will look like -
-
-```
-CONSUMER_KEY=''
-CONSUMER_SECRET=''
-SECRET_KEY=''
+SOCIAL_AUTH_TWITTER_KEY = "Your_Consumer_Key"
+SOCIAL_AUTH_TWITTER_SECRET = "Your_Consumer_Secret"
+SECRET_KEY = "Your_Secret_Key"
 ```
 
 ## Starting the Project
@@ -126,40 +117,36 @@ python3 manage.py runserver
 - Browse to the url [https://twitter-toplinkz.herokuapp.com/](https://twitter-toplinkz.herokuapp.com/) to see the landing page.
 
 - Clicking on 'Login with Twitter' Button will take you to Twitter's Authorization Page.
-  ![Login Page](images/1 "Login Page")
+  ![Login Page](media/1.png "Login Page")
   > Login Page
 
 **Twitter's Authorization Page**
-![Twitter Login](images/2 "Twitter Login")
+![Twitter Login](media/2.png "Twitter Login")
 
 > Twitter Login
-
-<!-- ![Authorization](images/2.5.png "Authorization")
-
-> Authorization -->
 
 **Home Page**
 
 - Home Page containg three dynamic cards - Tweets containg links,Users who have shared most links and Top domains shared so far
-  ![Home Page](images-videos/3 "Dashboard Page")
+  ![Home Page](media/3.png "Home Page")
 
   > Home Page View
 
 - Expanded `Tweets` dropdown card containing tweeted text which is a link to the actual tweet. 
 
-![Tweets](images-videos/6 "Tweets with URLs")
+![Tweets](media/6.png "Tweets with URLs")
 
 > Expanded Tweets
 
 - Expanded `Top User` dropdown card, containing screen name of user which is a link to the actual user profile on twitter.
 
-![Top User](images-videos/5 "Top User")
+![Top User](media/5.png "Top User")
 
 > Expanded Top User
 
 - Expanded `Top Domains` dropdown card, showing all the domains with their frequency.
 
-![Top Domain](images-videos/4 "Top Domain")
+![Top Domain](media/4.png "Top Domain")
 
 > Expanded Top Domain
 

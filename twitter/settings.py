@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 's+4%s2aux21xe77y1@x8-2s$rc+az#&uv$g4^yn+#8+*(1fk#k'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -138,5 +138,6 @@ LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 LOGIN_REDIRECT_URL = 'home'
 
-SOCIAL_AUTH_TWITTER_KEY = '..' 
-SOCIAL_AUTH_TWITTER_SECRET = '...'
+SOCIAL_AUTH_TWITTER_KEY = '' 
+SOCIAL_AUTH_TWITTER_SECRET = ''
+SECRET_KEY = ''
