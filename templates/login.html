@@ -1,0 +1,13 @@
+{% comment %} LoginPage -Nav.html as base {% endcomment %}
+{% extends 'nav.html' %}
+
+{% block title %}Login Page{% endblock title %}
+
+{% comment %} Login using Twitter {% endcomment %}
+{% block content %} 
+<div class="jumbotron text-center ">
+  <h1 class="display-4"style="color:#1a75ff">Hey There!!</h1>
+  <a href="{% url 'social:begin' 'twitter' %}"><button type="button" class="btn btn-primary"><i class="fa fa-twitter-square"></i> Login with Twitter</button></a>
+</div>
+
+{% endblock content %}

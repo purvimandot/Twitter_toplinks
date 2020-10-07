@@ -1,0 +1,66 @@
+{% comment %} HomePage -Nav.html as base {% endcomment %}
+{% extends 'nav.html' %}
+
+{% block content %}
+
+<h1>Twitter home </h1>
+<br>
+<div class="container" >
+    <h2 class="display-4">Hello ,<span style="color:#1a75ff">{{user.username}}</span></h2>
+    <h3 style="color:#1a75ff"><b>Find Here :</b></h2>
+    {% comment %} Dynamic pills to list each of the three requirements {% endcomment %}
+    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true"><b>Tweets in your timeline containing links (Click to see the actual tweet)</b></a>
+        <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false"><b>Users who have shared most links (Click on underlined to see the profile of the user)</b></a>
+        <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false"><b>Top domains shared so far</b></a>
+    </div>
+
+    {% comment %} Tab for all tweets in user's timeline(friends+user's) which have URL's in them {% endcomment %}
+    <div class="tab-content" id="v-pills-tabContent">
+        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+            <div class="card text-center" >
+                    <ul class="list-group list-group-flush">
+                        {% for j,k in tweets%}
+                            <li class="list-group-item"><i class="fa fa-twitter-square"></i><a href="https://twitter.com/twitter/statuses/{{k}}"><u> {{j}}</u></a></li>
+                        {% endfor %}
+                    </ul>
+            </div>  
+        </div>
+
+    {% comment %} Tab for listing users with maximum tweets {% endcomment %}
+    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+        <div class="card text-center" >
+                <ul class="list-group list-group-flush">
+                    {% for elem in a%}
+                        <li class="list-group-item"><i class="fa fa-twitter-square"></i> <a href="https://twitter.com/{{elem}}"><u>{{elem}}</u></a></li>
+                    {% endfor %}
+                </ul>
+        </div> 
+     </div>
+
+    {% comment %} Tab for listing domain names  {% endcomment %}
+    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+        <div class="card text-center" >
+                <ul class="list-group list-group-flush">
+                    {% for k,v in dom.items%}
+                        <li class="list-group-item"><i class="fa fa-twitter-square"></i> {{k}}
+                        <span class="fa-stack fa-x">
+                            <i class="fa fa-comment fa-stack-2x"></i>
+                            <strong class="fa-stack-1x fa-stack-text fa-inverse">{{v}}</strong>
+                        </span>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>  
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+
+
+</html>
+
+{% endblock %}
