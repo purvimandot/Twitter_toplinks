@@ -99,9 +99,7 @@ python3 manage.py runserver
 - On Landing page we have a `Login with Twitter' button.
 - After clicking on it will take user to `Twitter Login Page`.
 - After clicking on `Login with Twitter` button, `Tweepy API` will take user to authorize with Twitter page and will validate user's credentials. If correct it will redirect the user to `Home` page containing information about user's timeline.
-- `Auth` view and `Callback` view will take care of all authentication using Tweepy API.
-- For login and logout views `loginPage` and `logoutPage` are used.
-- User's data in stored in `database` which is then used to find out top authors and top domains.
+- User's data in stored in `database` which is then used to find out top users and top domains.
 - Tweet information database is stored using `Tweepy API`. Tweets containing urls and of past 7 days are fetched using `home_timeline` method and stored in `Tweet Database`. Tweet's author is stored in `TwitterUser Database`.
 - On the home page in 'Tweets in your Timeline' you will also get the feature to go to the `Actual tweet link on twitter` by clicking on the tweet link in the card shown.
 - You can also go to `User's profile on twitter` by clicking on user name in the card shown in 'Users who have shared most links'.
