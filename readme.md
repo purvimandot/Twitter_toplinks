@@ -126,11 +126,11 @@ python3 manage.py runserver
 - Browse to the url [https://twitter-toplinkz.herokuapp.com/](https://twitter-toplinkz.herokuapp.com/) to see the landing page.
 
 - Clicking on 'Login with Twitter' Button will take you to Twitter's Authorization Page.
-  ![Login Page](images/1.png "Login Page")
+  ![Login Page](images/1 "Login Page")
   > Login Page
 
 **Twitter's Authorization Page**
-![Twitter Login](images/2.png "Twitter Login")
+![Twitter Login](images/2 "Twitter Login")
 
 > Twitter Login
 
@@ -141,25 +141,25 @@ python3 manage.py runserver
 **Home Page**
 
 - Home Page containg three dynamic cards - Tweets containg links,Users who have shared most links and Top domains shared so far
-  ![Home Page](images-videos/3.png "Dashboard Page")
+  ![Home Page](images-videos/3 "Dashboard Page")
 
   > Home Page View
 
 - Expanded `Tweets` dropdown card containing tweeted text which is a link to the actual tweet. 
 
-![Tweets](images-videos/6.png "Tweets with URLs")
+![Tweets](images-videos/6 "Tweets with URLs")
 
 > Expanded Tweets
 
 - Expanded `Top User` dropdown card, containing screen name of user which is a link to the actual user profile on twitter.
 
-![Top User](images-videos/5.png "Top User")
+![Top User](images-videos/5 "Top User")
 
 > Expanded Top User
 
 - Expanded `Top Domains` dropdown card, showing all the domains with their frequency.
 
-![Top Domain](images-videos/4.png "Top Domain")
+![Top Domain](images-videos/4 "Top Domain")
 
 > Expanded Top Domain
 
