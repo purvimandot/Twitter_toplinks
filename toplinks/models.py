@@ -13,7 +13,7 @@ class TwitterUser(models.Model):
 class Tweet(models.Model):
     text= models.TextField()
     created_time= models.DateTimeField(auto_now=False, auto_now_add=False)
-    tweet_id= models.IntegerField()
+    tweet_id= models.BigIntegerField(blank=False)
     user=models.CharField(blank=False, max_length=20)
     def __str__(self):
         return self.text
