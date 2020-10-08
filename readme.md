@@ -148,6 +148,12 @@ python3 manage.py runserver
 
 > Expanded Top Domain
 
+## Working Demo
+
+- Full Working Demo of the Project
+
+![Full Working Demo](media/fullvideo.gif)
+
 
 ## Contact Me
 
