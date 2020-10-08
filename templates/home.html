@@ -1,4 +1,3 @@
-{% comment %} HomePage -Nav.html as base {% endcomment %}
 {% extends 'nav.html' %}
 
 {% block content %}
@@ -32,7 +31,10 @@
         <div class="card text-center" >
                 <ul class="list-group list-group-flush">
                     {% for elem in a%}
-                        <li class="list-group-item"><i class="fa fa-twitter-square"></i> <a href="https://twitter.com/{{elem}}"><u>{{elem}}</u></a></li>
+                        <li class="list-group-item"><a href="https://twitter.com/{{elem}}"><button type="button" class="btn btn-primary"><i class="fa fa-twitter-square"></i>
+                        {{elem}}<span class="badge badge-light">{{count_url}}</span>
+                         </a></button>
+                        </li>
                     {% endfor %}
                 </ul>
         </div> 

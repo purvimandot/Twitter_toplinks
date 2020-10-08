@@ -7,8 +7,8 @@ import tweepy
 import tldextract
 import datetime
 
-consumer_key='...'
-consumer_secret='...'
+consumer_key='ntRWC8TgucrSgJBFhFTDFLrlp'
+consumer_secret='6i0gOsO55zZjSOI44eMTXvyZiD881Xr6cLDtrOYZUe1btcmnpi'
 
 # Homepage
 @login_required(login_url="/login")
