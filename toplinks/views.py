@@ -53,7 +53,6 @@ def home(request):
     tweets=[]
     screen_names={}
     dom={}
-    a=[]
     # Extracting tweets with text and ID
     tweet_query=Tweet.objects.filter(user= request.user.username)
     for i in tweet_query:
@@ -64,10 +63,10 @@ def home(request):
 
     #Extracting names of users who shared tweets with URL's
     for j in twitter_user_query:
-        if j not in screen_names:
-            screen_names[j]=1
+        if j.screen_name not in screen_names:
+            screen_names[j.screen_name]=1
         else:
-            screen_names[j]+=1
+            screen_names[j.screen_name]+=1
         info = tldextract.extract(j.twitter_url)
 
         #Making dictionary of domain name
@@ -78,12 +77,16 @@ def home(request):
 
         # Users who shared most tweets
     m=0
+    count_url=0
+    a=[]
     for k,v in screen_names.items():
-        if v>m:
-            m=v
+        if v>count_url:
+            count_url=v
+            a=[k]
+        elif v==count_url:
             a.append(k)
 
-    return render(request,'home.html',{"tweets":tweets,"a":a,"dom":dom})
+    return render(request,'home.html',{"tweets":tweets,"a":a,"count_url":count_url,"dom":dom})
 
 #LoginPage
 def loginPage(request):

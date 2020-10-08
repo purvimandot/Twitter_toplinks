@@ -2,8 +2,6 @@
 
 {% block content %}
 
-<h1>Twitter home </h1>
-<br>
 <div class="container" >
     <h2 class="display-4">Hello ,<span style="color:#1a75ff">{{user.username}}</span></h2>
     <h3 style="color:#1a75ff"><b>Find Here :</b></h2>
@@ -17,7 +15,7 @@
     {% comment %} Tab for all tweets in user's timeline(friends+user's) which have URL's in them {% endcomment %}
     <div class="tab-content" id="v-pills-tabContent">
         <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-            <div class="card text-center" >
+            <div class="card" >
                     <ul class="list-group list-group-flush">
                         {% for j,k in tweets%}
                             <li class="list-group-item"><i class="fa fa-twitter-square"></i><a href="https://twitter.com/twitter/statuses/{{k}}"><u> {{j}}</u></a></li>
@@ -31,9 +29,9 @@
         <div class="card text-center" >
                 <ul class="list-group list-group-flush">
                     {% for elem in a%}
-                        <li class="list-group-item"><a href="https://twitter.com/{{elem}}"><button type="button" class="btn btn-primary"><i class="fa fa-twitter-square"></i>
-                        {{elem}}<span class="badge badge-light">{{count_url}}</span>
-                         </a></button>
+                        <li class="list-group-item"><a href="https://twitter.com/{{elem}}" style="color:white"><button type="button" class="btn btn-primary">
+                        <i class="fa fa-twitter-square">{{elem}}<span class="badge badge-light">{{count_url}}</span>
+                         </i></a></button>
                         </li>
                     {% endfor %}
                 </ul>
