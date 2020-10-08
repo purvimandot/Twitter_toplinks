@@ -118,17 +118,17 @@ python3 manage.py runserver
   ![Login Page](media/1.png "Login Page")
   > Login Page
 
-**Twitter's Authorization Page**
+**Twitter's Authorization Pages**
 ![Twitter Login](media/2.png "Twitter Login")
+
+  ![Authorization](media/3.png "Authorization")
 
 > Twitter Login
 
 **Home Page**
 
 - Home Page containg three dynamic cards - Tweets containg links,Users who have shared most links and Top domains shared so far
-  ![Home Page](media/3.png "Home Page")
 
-  > Home Page View
 
 - Expanded `Tweets` dropdown card containing tweeted text which is a link to the actual tweet. 
 
